@@ -1,5 +1,7 @@
 # Ticket Şablonu
 
+Bu ticket senaryoları, help desk tarafında bir sorunu nasıl ele alacağımı pratik etmek için hazırlandı. Amaç hazır cevap vermek değil; belirtiyi anlamak, doğru kontrol sırasını kurmak ve çözümü kanıtlamaktı.
+
 ## Özet
 
 Sorunun kısa açıklaması.
@@ -25,4 +27,5 @@ Uygulanan düzeltmeyi yaz.
 ## Doğrulama
 
 Sorunun gerçekten çözüldüğünü gösteren kontrol.
+
 

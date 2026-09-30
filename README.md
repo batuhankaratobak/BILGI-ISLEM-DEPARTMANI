@@ -1,8 +1,21 @@
 # BK LAB Kurumsal IT ve Help Desk Laboratuvarı
 
-Pratik IT Destek ve Junior Sistem Yöneticiliği eğitimi için hazırlanmış uçtan uca Windows kurumsal altyapı laboratuvarı.
+**BK LAB, kurumsal Bilgi İşlem ve Help Desk süreçlerini kendi öğrenme sürecimde uygulamalı olarak deneyimlemek için oluşturduğum Windows tabanlı bir laboratuvar projesidir.**
 
-> **Lab notu:** BK LAB tamamen kurgusal bir organizasyondur. Bu depo gerçek bir şirket altyapısını veya üretim ortamını temsil etmez.
+Bu projeyi hazırlarken amacım bir konuyu sadece okuyup geçmek değildi. Active Directory, DNS, DHCP, Group Policy, dosya yetkilendirme, help desk ticket süreçleri, envanter yönetimi ve temel PowerShell otomasyonlarını gerçekçi bir şirket senaryosu içinde kurup bozarak, test ederek ve doğrulayarak öğrenmek istedim.
+
+Projeyi tamamladıktan sonra katıldığım teknik mülakatlarda karşıma çıkan soruların önemli bir bölümünün bu lab içinde çalıştığım konularla örtüştüğünü gördüm. Bu da benim için projenin sadece bir portfolyo çalışması değil, pratikte gerçekten karşılığı olan bir hazırlık süreci olduğunu gösterdi.
+
+> **Lab notu:** BK LAB tamamen kurgusal bir organizasyondur. Bu depo gerçek bir şirket altyapısını, müşteri bilgisini veya üretim ortamını temsil etmez.
+
+
+## Neden Bu Projeyi Yaptım?
+
+Bu projeyi kendi eksiklerimi görmek, öğrendiğim konuları uygulamaya dökmek ve kurumsal Bilgi İşlem süreçlerini daha somut hale getirmek için hazırladım.
+
+Teoride bildiğim konuların gerçek bir ortamda birbirine nasıl bağlandığını görmek istedim: bir kullanıcının domain hesabı nasıl açılır, bilgisayar domain'e nasıl alınır, DNS yanlışsa ne bozulur, DHCP çalışmazsa client ne yaşar, GPO neden uygulanmaz, bir kullanıcı hangi klasöre neden erişebilir veya erişemez, help desk ticket'ı nasıl ele alınır gibi soruları lab içinde tek tek deneyimledim.
+
+Bu süreç bana sadece komut veya menü ezberletmedi. Bir sorunu parçalara ayırmayı, kanıt toplamayı, sonucu doğrulamayı ve yaptığım işi anlaşılır şekilde dokümante etmeyi öğretti.
 
 ## Genel Bakış
 
@@ -190,7 +203,6 @@ Hyper-V, Windows Server 2022 Desktop Experience, Windows 11, AD DS, DNS, DHCP, G
 ## Kazanılan Beceriler
 
 Windows yönetimi, kullanıcı yaşam döngüsü, DNS/DHCP sorun giderme, Group Policy, least privilege yetkilendirme, ITIL tarzı ticket dokümantasyonu, varlık yönetimi, PowerShell otomasyonu ve teknik dokümantasyon.
-
 
 
 

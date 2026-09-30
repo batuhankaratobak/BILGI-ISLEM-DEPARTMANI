@@ -1,5 +1,7 @@
 # Mimari
 
+Bu mimariyi kendi öğrenme sürecimde gerçekçi bir şirket altyapısını küçük ölçekte canlandırmak için tasarladım. Amaç, servislerin tek tek değil, birbirine bağlı şekilde nasıl çalıştığını görmekti.
+
 Lab Hyper-V üzerinde izole bir kurumsal ağ olarak tasarlanmıştır.
 
 ```text
@@ -15,4 +17,5 @@ GLPI, Docker üzerinde yerel help desk sistemi olarak çalışır. Host üzerind
 ## Amaç
 
 Bu mimari, gerçek ev ağına dokunmadan küçük bir şirket altyapısını simüle eder. DHCP internal switch üzerinde kalır; fiziksel ağa bridge edilmez.
+
 

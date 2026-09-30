@@ -5,7 +5,7 @@ UPDATE glpi_users SET firstname='Zeynep', realname='Yilmaz' WHERE name='zeynep.y
 UPDATE glpi_users SET firstname='Elif', realname='Aydin' WHERE name='elif.aydin';
 
 INSERT INTO glpi_itilcategories (entities_id,is_recursive,itilcategories_id,name,completename,comment,level,is_helpdeskvisible,is_incident,is_request,date_creation,date_mod)
-SELECT 0,1,0,x.name,x.name,'BK WORKS lab category',1,1,1,1,NOW(),NOW()
+SELECT 0,1,0,x.name,x.name,'BK LAB eğitim kategorisi',1,1,1,1,NOW(),NOW()
 FROM (
  SELECT 'Hesap ve Erişim' name UNION ALL SELECT 'Donanım' UNION ALL SELECT 'Yazılım' UNION ALL
  SELECT 'Ağ' UNION ALL SELECT 'Yazıcı' UNION ALL SELECT 'Microsoft 365' UNION ALL SELECT 'VPN' UNION ALL
@@ -13,7 +13,7 @@ FROM (
 ) x WHERE NOT EXISTS (SELECT 1 FROM glpi_itilcategories c WHERE c.name=x.name AND c.entities_id=0);
 
 INSERT INTO glpi_slas (name,entities_id,is_recursive,type,comment,number_time,use_ticket_calendar,definition_time,end_of_working_day,date_creation,date_mod)
-SELECT x.name,0,1,1,'Training SLA only — not a production BK WORKS SLA',x.minutes,0,CONCAT(x.minutes,' minute'),0,NOW(),NOW()
+SELECT x.name,0,1,1,'Sadece eğitim amaçlı SLA - üretim BK LAB SLA değeri değildir',x.minutes,0,CONCAT(x.minutes,' minute'),0,NOW(),NOW()
 FROM (
  SELECT 'Critical - 15 min initial response' name,15 minutes UNION ALL
  SELECT 'High - 30 min initial response',30 UNION ALL
@@ -59,7 +59,7 @@ SELECT 'Computer',c.id,t.id FROM glpi_computers c JOIN glpi_tickets t ON t.name=
 WHERE c.otherserial='BK-LPT-001' AND NOT EXISTS (SELECT 1 FROM glpi_items_tickets i WHERE i.itemtype='Computer' AND i.items_id=c.id AND i.tickets_id=t.id);
 
 INSERT INTO glpi_monitors (entities_id,name,serial,otherserial,size,have_hdmi,have_displayport,comment,date_creation,date_mod,is_recursive)
-SELECT 0,'BK-MON-001','LAB-MON-001','BK-MON-001',24,1,1,'BK WORKS lab monitor',NOW(),NOW(),1
+SELECT 0,'BK-MON-001','LAB-MON-001','BK-MON-001',24,1,1,'BK LAB eğitim monitörü',NOW(),NOW(),1
 WHERE NOT EXISTS (SELECT 1 FROM glpi_monitors WHERE otherserial='BK-MON-001');
 
 INSERT INTO glpi_printers (entities_id,is_recursive,name,serial,otherserial,have_ethernet,comment,date_creation,date_mod)
@@ -97,6 +97,8 @@ WHERE c.otherserial='BK-LPT-001' AND NOT EXISTS (SELECT 1 FROM glpi_items_ticket
 INSERT INTO glpi_items_tickets (itemtype,items_id,tickets_id)
 SELECT 'Yazıcı',p.id,t.id FROM glpi_printers p JOIN glpi_tickets t ON t.name='INC-009 - Yazıcı Problem'
 WHERE p.otherserial='BK-PRN-001' AND NOT EXISTS (SELECT 1 FROM glpi_items_tickets i WHERE i.itemtype='Yazıcı' AND i.items_id=p.id AND i.tickets_id=t.id);
+
+
 
 
 

@@ -1,6 +1,6 @@
 # Yönetim Menüsü Rehberi
 
-Bu rehber BK WORKS lab'ında kullanılan ana konsolları ve her birinin ne işe yaradığını açıklar.
+Bu rehber BK LAB lab'ında kullanılan ana konsolları ve her birinin ne işe yaradığını açıklar.
 
 ## Hyper-V Manager
 
@@ -75,3 +75,4 @@ Help desk ve varlık yönetimi sağlar.
 - Categories: ticket sınıflandırması
 - SLA: hedef süreler
 - Historical: ticket geçmişi
+

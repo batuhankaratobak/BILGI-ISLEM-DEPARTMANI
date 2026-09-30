@@ -1,8 +1,8 @@
-# BK WORKS Kurumsal IT ve Help Desk Laboratuvarı
+# BK LAB Kurumsal IT ve Help Desk Laboratuvarı
 
 Pratik IT Destek ve Junior Sistem Yöneticiliği eğitimi için hazırlanmış uçtan uca Windows kurumsal altyapı laboratuvarı.
 
-> **Lab notu:** BK WORKS tamamen kurgusal bir organizasyondur. Bu depo gerçek bir şirket altyapısını veya üretim ortamını temsil etmez.
+> **Lab notu:** BK LAB tamamen kurgusal bir organizasyondur. Bu depo gerçek bir şirket altyapısını veya üretim ortamını temsil etmez.
 
 ## Genel Bakış
 
@@ -176,6 +176,13 @@ Yayınlamadan önce:
 - Lab-only isimler ve sentetik kullanıcılar kullanılmalıdır.
 - ISO, VM disk ve log dosyaları Git'e eklenmemelidir.
 
+
+## Eğitimsel Değer
+
+Bu simülatör, 5.000-10.000 çalışan ölçeğinde global bir şirkette karşılaşılabilecek temel IT destek ve sistem yönetimi sorularını anlamak için pratik bir çalışma alanı sağlamıştır. Gerçek şirket adı, müşteri bilgisi veya üretim ortamı paylaşılmadan; kullanıcı yönetimi, erişim yetkileri, DHCP/DNS, Group Policy, dosya paylaşımları, help desk ticket akışı ve doğrulama süreçleri uçtan uca simüle edilmiştir.
+
+Bu çalışma, kurumsal IT destek bakış açısını güçlendirmeyi, sorunları sistematik şekilde analiz etmeyi ve teknik çıktıları profesyonelce dokümante etmeyi hedefler.
+
 ## Teknolojiler
 
 Hyper-V, Windows Server 2022 Desktop Experience, Windows 11, AD DS, DNS, DHCP, Group Policy, File Services, GLPI, MySQL, Docker Compose, PowerShell, Git ve GitHub.
@@ -183,4 +190,6 @@ Hyper-V, Windows Server 2022 Desktop Experience, Windows 11, AD DS, DNS, DHCP, G
 ## Kazanılan Beceriler
 
 Windows yönetimi, kullanıcı yaşam döngüsü, DNS/DHCP sorun giderme, Group Policy, least privilege yetkilendirme, ITIL tarzı ticket dokümantasyonu, varlık yönetimi, PowerShell otomasyonu ve teknik dokümantasyon.
+
+
 

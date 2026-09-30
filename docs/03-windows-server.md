@@ -31,6 +31,7 @@ menüsü ile ADUC, DNS, DHCP ve GPMC açılır.
 - Hostname: `DC01`
 - IP: `10.10.10.10/24`
 - DNS: `10.10.10.10`
-- Domain: `bkworks.local`
+- Domain: `bklab.local`
 
 DSRM ve administrator şifreleri repo içine yazılmaz.
+

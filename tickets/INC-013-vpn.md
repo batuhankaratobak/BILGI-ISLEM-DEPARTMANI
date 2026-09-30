@@ -14,3 +14,4 @@ Kullanıcı uzaktan erişim/VPN talep eder.
 ## Çözüm
 
 Onay sonrası kullanıcı ilgili VPN/remote access grubuna eklenir ve bağlantı testi yapılır.
+

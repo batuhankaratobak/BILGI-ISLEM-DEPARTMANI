@@ -1,4 +1,4 @@
-name: bkworks-glpi
+name: bklab-glpi
 services:
   glpi:
     image: glpi/glpi:latest
@@ -30,4 +30,5 @@ services:
 volumes:
   glpi_data:
   db_data:
+
 

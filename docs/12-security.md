@@ -11,3 +11,4 @@ Kurallar:
 - Kısıtlayıcı GPO'lar önce test OU üzerinde denenir.
 - Yetkiler kullanıcılara değil gruplara verilir.
 - Least privilege prensibi uygulanır.
+

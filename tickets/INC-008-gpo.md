@@ -18,3 +18,4 @@ gpupdate /force
 gpresult /r
 net use
 ```
+

@@ -24,3 +24,4 @@ ipconfig /renew
 ## Doğrulama
 
 Client `10.10.10.100-200` aralığından IP almalıdır.
+

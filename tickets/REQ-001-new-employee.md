@@ -19,3 +19,4 @@ Onboarding sürecinin düzenli ve tekrar edilebilir şekilde yapılması.
 ## Kanıt
 
 `whoami`, `net use`, `Test-Path` ve AD grup üyeliği çıktıları.
+

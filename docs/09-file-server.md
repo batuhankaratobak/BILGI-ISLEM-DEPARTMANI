@@ -46,3 +46,4 @@ Test-Path \\DC01\HR
 ```
 
 Beklenen: IT erişimi başarılı, HR erişimi reddedilir.
+

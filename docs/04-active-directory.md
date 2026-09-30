@@ -1,6 +1,6 @@
 # Active Directory
 
-Domain: `bkworks.local`. Base DN: `OU=BKWORKS,DC=bkworks,DC=local`.
+Domain: `bklab.local`. Base DN: `OU=BKLAB,DC=bklab,DC=local`.
 
 Active Directory lab'ın kimlik katmanıdır. Kullanıcıları, bilgisayarları, grupları ve yetkileri merkezi olarak tutar.
 
@@ -14,8 +14,8 @@ Server Manager > Tools > Active Directory Users and Computers
 
 Önemli alanlar:
 
-- Domain root: `bkworks.local`
-- `OU=BKWORKS`: lab ana konteyneri
+- Domain root: `bklab.local`
+- `OU=BKLAB`: lab ana konteyneri
 - `OU=Users`: kullanıcı hesapları
 - Departman OU'ları: `IT`, `HR`, `Finance`, `Sales`
 - `OU=Groups`: erişim grupları
@@ -40,6 +40,7 @@ Yetkiler kullanıcılara tek tek değil gruplara verilir. Kullanıcı departman 
 
 ```powershell
 Get-ADDomain
-Get-ADUser -Filter * -SearchBase "OU=Users,OU=BKWORKS,DC=bkworks,DC=local" | Select-Object Name,DistinguishedName
+Get-ADUser -Filter * -SearchBase "OU=Users,OU=BKLAB,DC=bklab,DC=local" | Select-Object Name,DistinguishedName
 Get-ADGroupMember BK-Helpdesk
 ```
+

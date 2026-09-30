@@ -13,7 +13,7 @@ Amaç sadece çalışan bir lab göstermek değildir. Aynı zamanda hangi yönet
 ## Mimari
 
 - Hyper-V çalışan Windows ana makine
-- İç lab ağı: `BKWORKS-LAN`
+- İç lab ağı: `BKLAB-LAN`
 - Lab subnet'i: `10.10.10.0/24`
 - `DC01`: Active Directory, DNS, DHCP, Group Policy ve dosya servisleri
 - `CLIENT01`: Domain'e katılmış Windows 11 çalışan bilgisayarı
@@ -21,7 +21,7 @@ Amaç sadece çalışan bir lab göstermek değildir. Aynı zamanda hangi yönet
 
 ## Kurulan Servisler
 
-- Active Directory domain'i: `bkworks.local`
+- Active Directory domain'i: `bklab.local`
 - Domain isim çözümleme için DNS
 - İç lab ağı için DHCP scope
 - Client baseline ve sürücü eşleme için Group Policy
@@ -38,7 +38,7 @@ Amaç sadece çalışan bir lab göstermek değildir. Aynı zamanda hangi yönet
 | Server Manager | Server rolleri kurma ve yönetim araçlarını açma |
 | Active Directory Users and Computers | Kullanıcı, grup, OU, bilgisayar ve delegation yönetimi |
 | Group Policy Management | GPO linkleme, drive mapping ve client ayarları |
-| DNS Manager | `bkworks.local` DNS zone'u ve isim çözümleme |
+| DNS Manager | `bklab.local` DNS zone'u ve isim çözümleme |
 | DHCP Manager | DHCP yetkilendirme, scope, option ve lease yönetimi |
 | File and Storage Services | SMB paylaşımı ve dosya erişim yönetimi |
 | GLPI | Ticket, kullanıcı, kategori, SLA, varlık ve geçmiş yönetimi |
@@ -52,7 +52,7 @@ Hyper-V Manager ile izole lab makineleri yönetildi. `DC01` ve `CLIENT01` sanal 
 
 Yapılanlar:
 
-- `BKWORKS-LAN` internal switch oluşturuldu.
+- `BKLAB-LAN` internal switch oluşturuldu.
 - İki VM aynı izole ağa bağlandı.
 - Windows Server ve Windows 11 ISO dosyaları VM'lere takıldı.
 - VM başlatma, kapatma, bağlanma ve checkpoint işlemleri yapıldı.
@@ -75,7 +75,7 @@ Active Directory Users and Computers, domain kimlik nesnelerini yönetmek için 
 
 Yapılanlar:
 
-- `BKWORKS` OU yapısı oluşturuldu.
+- `BKLAB` OU yapısı oluşturuldu.
 - Departman OU'ları oluşturuldu: IT, HR, Finance, Sales.
 - Lab kullanıcıları ve grupları oluşturuldu.
 - `CLIENT01` doğru Computers OU'suna taşındı.
@@ -87,8 +87,8 @@ Group Policy Management, kullanıcı ve bilgisayarlara merkezi ayar uygulamak i�
 
 Yapılanlar:
 
-- `BKWORKS - Client Baseline` Computers OU'suna linklendi.
-- `BKWORKS - User Drive Mapping` Users OU'suna linklendi.
+- `BKLAB - Client Baseline` Computers OU'suna linklendi.
+- `BKLAB - User Drive Mapping` Users OU'suna linklendi.
 - `S:` sürücüsü `\\DC01\Company` paylaşımına eşlendi.
 - `gpupdate /force` ve `gpresult /r` ile doğrulandı.
 
@@ -98,8 +98,8 @@ DNS Manager, domain isim çözümlemesini yönetir.
 
 Yapılanlar:
 
-- `bkworks.local` DNS zone'u doğrulandı.
-- `dc01.bkworks.local` kaydının doğru çözüldüğü kontrol edildi.
+- `bklab.local` DNS zone'u doğrulandı.
+- `dc01.bklab.local` kaydının doğru çözüldüğü kontrol edildi.
 - `dcdiag /test:DNS /q` ile DNS sağlığı doğrulandı.
 
 ### DHCP Manager
@@ -109,7 +109,7 @@ DHCP Manager, lab client'larına otomatik IP vermek için kullanıldı.
 Yapılanlar:
 
 - `DC01` Active Directory içinde yetkili DHCP sunucusu yapıldı.
-- `BKWORKS-LAN` scope'u oluşturuldu.
+- `BKLAB-LAN` scope'u oluşturuldu.
 - Client IP aralığı `10.10.10.100-200` olarak ayarlandı.
 - DNS option değeri `10.10.10.10` olarak verildi.
 - DHCP servisinin çalıştığı doğrulandı.
@@ -140,7 +140,7 @@ Yapılanlar:
 
 Lab şu kontrollerle doğrulandı:
 
-- `CLIENT01`, `bkworks.local` domain'ine başarıyla katıldı.
+- `CLIENT01`, `bklab.local` domain'ine başarıyla katıldı.
 - Kullanıcı ve bilgisayar GPO'ları `gpresult /r` ile uygulandı.
 - `S:` sürücüsü otomatik olarak `\\DC01\Company` paylaşımına bağlandı.
 - IT kullanıcısı `\\DC01\IT` paylaşımına erişebildi.
@@ -190,6 +190,7 @@ Hyper-V, Windows Server 2022 Desktop Experience, Windows 11, AD DS, DNS, DHCP, G
 ## Kazanılan Beceriler
 
 Windows yönetimi, kullanıcı yaşam döngüsü, DNS/DHCP sorun giderme, Group Policy, least privilege yetkilendirme, ITIL tarzı ticket dokümantasyonu, varlık yönetimi, PowerShell otomasyonu ve teknik dokümantasyon.
+
 
 
 

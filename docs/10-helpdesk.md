@@ -33,3 +33,4 @@ Kullanıcı sorun bildirir, ticket açılır, kategori ve öncelik atanır, tekn
 
 GLPI ve MySQL internete açılmamalıdır.
 
+

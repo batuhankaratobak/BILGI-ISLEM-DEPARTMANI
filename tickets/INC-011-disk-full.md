@@ -15,3 +15,4 @@ Client veya server üzerinde disk alanı azaldı.
 ```powershell
 Get-Volume
 ```
+

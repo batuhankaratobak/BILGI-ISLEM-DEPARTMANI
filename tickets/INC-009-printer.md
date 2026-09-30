@@ -19,3 +19,4 @@ Get-Printer
 Get-PrintJob
 ping 10.10.10.50
 ```
+

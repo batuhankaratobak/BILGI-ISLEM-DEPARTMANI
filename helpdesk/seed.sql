@@ -102,3 +102,4 @@ WHERE p.otherserial='BK-PRN-001' AND NOT EXISTS (SELECT 1 FROM glpi_items_ticket
 
 
 
+

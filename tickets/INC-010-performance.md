@@ -17,3 +17,4 @@ Kullanıcı bilgisayarın yavaş çalıştığını bildirir.
 Get-Process | Sort-Object CPU -Descending | Select-Object -First 10
 Get-Volume
 ```
+

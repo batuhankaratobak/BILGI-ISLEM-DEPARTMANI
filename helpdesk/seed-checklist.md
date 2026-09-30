@@ -20,3 +20,4 @@ Hesap ve Erişim; Donanım; Yazılım; Ağ; Yazıcı; Microsoft 365; VPN; Güven
 - Varlıklar GLPI Assets altında görünmeli.
 - Ticket'lar teknisyene atanmış olmalı.
 - SLA ve kategori alanları dolu olmalı.
+

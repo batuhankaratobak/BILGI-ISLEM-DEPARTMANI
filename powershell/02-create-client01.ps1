@@ -5,13 +5,13 @@ param(
     [ValidateScript({ Test-Path -LiteralPath $_ -PathType Leaf })]
     [string]$ClientIso,
 
-    [string]$VmRoot = 'C:\Hyper-V\BKWORKS',
+    [string]$VmRoot = 'C:\Hyper-V\BKLAB',
 
     [string]$ResultFile = (Join-Path (Split-Path -Parent $PSScriptRoot) 'client01-result.txt')
 )
 
 $ErrorActionPreference = 'Stop'
-$switchName = 'BKWORKS-LAN'
+$switchName = 'BKLAB-LAN'
 $vmName = 'CLIENT01'
 
 Import-Module Hyper-V
@@ -49,3 +49,4 @@ Get-VM -Name $vmName | Format-List Name,State,Generation,Path,ProcessorCount,Mem
 Get-VMNetworkAdapter -VMName $vmName | Format-List VMName,SwitchName,MacAddress
 'CLIENT01_CREATED_OK' | Set-Content -LiteralPath $ResultFile
 Write-Host 'CLIENT01_CREATED_OK'
+

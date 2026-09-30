@@ -14,3 +14,4 @@ Kullanıcı şüpheli e-posta aldığını bildirir.
 ## Çözüm
 
 E-posta izole edilir, kullanıcı bilgilendirilir, gerekirse şifre reset/MFA kontrolü yapılır. Gerçek zararlı içerik çalıştırılmaz.
+

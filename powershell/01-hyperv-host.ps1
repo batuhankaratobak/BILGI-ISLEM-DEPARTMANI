@@ -3,11 +3,11 @@
 param(
     [Parameter(Mandatory)][ValidateScript({Test-Path $_ -PathType Leaf})][string]$ServerIso,
     [Parameter(Mandatory)][ValidateScript({Test-Path $_ -PathType Leaf})][string]$ClientIso,
-    [string]$VmRoot = 'C:\Hyper-V\BKWORKS',
+    [string]$VmRoot = 'C:\Hyper-V\BKLAB',
     [switch]$EnableNat
 )
 $ErrorActionPreference = 'Stop'
-$switchName = 'BKWORKS-LAN'
+$switchName = 'BKLAB-LAN'
 if (-not (Get-VMSwitch -Name $switchName -ErrorAction SilentlyContinue)) {
     New-VMSwitch -Name $switchName -SwitchType Internal | Out-Null
 }
@@ -16,8 +16,8 @@ if (-not (Get-NetIPAddress -InterfaceAlias $adapter -AddressFamily IPv4 -ErrorAc
     Get-NetIPAddress -InterfaceAlias $adapter -AddressFamily IPv4 -ErrorAction SilentlyContinue | Remove-NetIPAddress -Confirm:$false
     New-NetIPAddress -InterfaceAlias $adapter -IPAddress '10.10.10.1' -PrefixLength 24 | Out-Null
 }
-if ($EnableNat -and -not (Get-NetNat -Name 'BKWORKS-NAT' -ErrorAction SilentlyContinue)) {
-    New-NetNat -Name 'BKWORKS-NAT' -InternalIPInterfaceAddressPrefix '10.10.10.0/24' | Out-Null
+if ($EnableNat -and -not (Get-NetNat -Name 'BKLAB-NAT' -ErrorAction SilentlyContinue)) {
+    New-NetNat -Name 'BKLAB-NAT' -InternalIPInterfaceAddressPrefix '10.10.10.0/24' | Out-Null
 }
 New-Item -ItemType Directory -Path $VmRoot -Force | Out-Null
 function New-BKWorksVM {
@@ -32,4 +32,5 @@ function New-BKWorksVM {
 New-BKWorksVM DC01 4GB 80GB $ServerIso
 New-BKWorksVM CLIENT01 4GB 64GB $ClientIso
 Get-VM DC01,CLIENT01 | Format-Table Name,State,Generation,ProcessorCount,MemoryStartup
+
 

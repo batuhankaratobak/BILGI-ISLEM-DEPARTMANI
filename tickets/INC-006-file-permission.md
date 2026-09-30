@@ -18,3 +18,4 @@ whoami /groups
 Test-Path \\DC01\IT
 Test-Path \\DC01\HR
 ```
+

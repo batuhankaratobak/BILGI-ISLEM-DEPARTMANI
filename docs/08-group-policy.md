@@ -20,8 +20,8 @@ Server Manager > Tools > Group Policy Management
 
 ## Kurulan GPO'lar
 
-- `BKWORKS - Client Baseline`
-- `BKWORKS - User Drive Mapping`
+- `BKLAB - Client Baseline`
+- `BKLAB - User Drive Mapping`
 
 Drive mapping ayarı:
 
@@ -40,3 +40,4 @@ gpupdate /force
 gpresult /r
 net use
 ```
+

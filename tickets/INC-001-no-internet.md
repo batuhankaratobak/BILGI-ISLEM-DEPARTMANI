@@ -17,5 +17,6 @@ Kullanıcı internet veya ağ kaynaklarına erişemediğini bildirir.
 ```powershell
 ipconfig /all
 ping 10.10.10.10
-Resolve-DnsName dc01.bkworks.local
+Resolve-DnsName dc01.bklab.local
 ```
+

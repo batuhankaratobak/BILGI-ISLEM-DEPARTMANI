@@ -14,7 +14,8 @@ Bu ekran görüntüleri GitHub yayını için kırpılmış ve gözden geçirilm
 | `08-final-hyperv-checkpoints.png` | DC01 ve CLIENT01 final Hyper-V checkpoint'leri |
 | `09-glpi-ticket-list.png` | GLPI ticket kuyruğu ve lab incident/request listesi |
 | `10-glpi-ticket-resolved.png` | GLPI ticket çözüm ve kabul ekranı |
-| `11-client-domain-joined.png` | CLIENT01'in `bkworks.local` domain'ine katılması |
+| `11-client-domain-joined.png` | CLIENT01'in `bklab.local` domain'ine katılması |
 | `12-password-policy.png` | Domain parola ve hesap kilitleme politikası doğrulaması |
 
 Yeni ekran görüntüsü eklemeden önce ilgisiz UI alanlarını kırpın; kişisel isimleri, yolları, şifreleri, token'ları ve ilgisiz hesap detaylarını redakte edin.
+

@@ -18,3 +18,4 @@
 Disable-ADAccount -Identity user.name
 Get-ADPrincipalGroupMembership user.name
 ```
+

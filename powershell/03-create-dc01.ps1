@@ -5,12 +5,12 @@ param(
     [ValidateScript({ Test-Path -LiteralPath $_ -PathType Leaf })]
     [string]$ServerIso,
 
-    [string]$VmRoot = 'C:\Hyper-V\BKWORKS'
+    [string]$VmRoot = 'C:\Hyper-V\BKLAB'
 )
 
 $ErrorActionPreference = 'Stop'
 $vmName = 'DC01'
-$switchName = 'BKWORKS-LAN'
+$switchName = 'BKLAB-LAN'
 
 Import-Module Hyper-V
 
@@ -42,4 +42,5 @@ Set-VMFirmware -VMName $vmName -FirstBootDevice $dvd `
 Get-VM -Name $vmName | Format-List Name,State,Generation,Path,ProcessorCount,MemoryStartup
 Get-VMNetworkAdapter -VMName $vmName | Format-List VMName,SwitchName,MacAddress
 Get-VMDvdDrive -VMName $vmName | Format-List Path
+
 

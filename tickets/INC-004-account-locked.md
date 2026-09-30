@@ -16,3 +16,4 @@ Kullanıcı yanlış şifre denemeleri sonrası domain hesabına giriş yapamıy
 Search-ADAccount -LockedOut
 Unlock-ADAccount -Identity user.name
 ```
+

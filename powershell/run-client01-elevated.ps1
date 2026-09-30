@@ -17,3 +17,4 @@ try {
     $_ | Format-List * -Force | Out-File -LiteralPath $LogPath -Encoding utf8
     exit 1
 }
+

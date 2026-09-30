@@ -7,7 +7,8 @@ param(
 )
 Import-Module ActiveDirectory
 $password = Read-Host 'Temporary password' -AsSecureString
-New-ADUser -Name "$GivenName $Surname" -GivenName $GivenName -Surname $Surname -SamAccountName $SamAccountName -UserPrincipalName "$SamAccountName@bkworks.local" -Department $Department -Path "OU=$Department,OU=BKWORKS,DC=bkworks,DC=local" -AccountPassword $password -Enabled $true -ChangePasswordAtLogon $true
+New-ADUser -Name "$GivenName $Surname" -GivenName $GivenName -Surname $Surname -SamAccountName $SamAccountName -UserPrincipalName "$SamAccountName@bklab.local" -Department $Department -Path "OU=$Department,OU=BKLAB,DC=bklab,DC=local" -AccountPassword $password -Enabled $true -ChangePasswordAtLogon $true
 Add-ADGroupMember ("GG_" + $Department.ToUpperInvariant()) $SamAccountName
 Add-ADGroupMember GG_SHARED_DRIVE_USERS $SamAccountName
+
 

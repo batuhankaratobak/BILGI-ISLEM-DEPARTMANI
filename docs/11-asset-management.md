@@ -15,3 +15,4 @@ Varlık yönetimi, şirket cihazlarının ve ilişkili ticket'ların takip edilm
 ## Amaç
 
 Bir ticket sadece kullanıcıya değil, ilgili cihaza da bağlanabilir. Bu sayede hangi cihazda ne kadar sorun yaşandığı takip edilir.
+

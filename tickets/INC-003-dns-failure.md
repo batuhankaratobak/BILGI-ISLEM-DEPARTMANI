@@ -7,13 +7,14 @@ Client domain controller adını çözemiyor veya domain kaynaklarına erişemiy
 ## Kontrol
 
 - Client DNS server olarak `10.10.10.10` kullanıyor mu?
-- `bkworks.local` zone'u var mı?
-- `dc01.bkworks.local` çözümleniyor mu?
+- `bklab.local` zone'u var mı?
+- `dc01.bklab.local` çözümleniyor mu?
 
 ## Komutlar
 
 ```powershell
 ipconfig /all
-Resolve-DnsName dc01.bkworks.local
-nslookup dc01.bkworks.local
+Resolve-DnsName dc01.bklab.local
+nslookup dc01.bklab.local
 ```
+

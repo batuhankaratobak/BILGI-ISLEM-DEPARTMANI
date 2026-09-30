@@ -18,3 +18,4 @@ Set-ADUser user.name -ChangePasswordAtLogon $true
 ## Doğrulama
 
 Kullanıcı geçici şifre ile giriş yapar ve ilk girişte yeni şifre belirler.
+

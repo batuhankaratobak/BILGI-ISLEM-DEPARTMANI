@@ -8,7 +8,7 @@ Sanal makineleri oluşturmak ve yönetmek için kullanılır.
 
 - Virtual Machines: `DC01` ve `CLIENT01` durumunu gösterir.
 - Settings: CPU, RAM, disk, ISO, network adapter, Secure Boot ve TPM ayarları.
-- Virtual Switch Manager: `BKWORKS-LAN` ağını oluşturur.
+- Virtual Switch Manager: `BKLAB-LAN` ağını oluşturur.
 - Connect: VM ekranına bağlanır.
 - Checkpoints: geri dönüş noktası oluşturur.
 
@@ -45,8 +45,8 @@ Merkezi kullanıcı ve bilgisayar ayarlarını yönetir.
 
 Domain isim çözümlemesini yönetir.
 
-- Forward Lookup Zones: `bkworks.local` gibi zone'lar
-- Host records: `dc01.bkworks.local` gibi kayıtlar
+- Forward Lookup Zones: `bklab.local` gibi zone'lar
+- Host records: `dc01.bklab.local` gibi kayıtlar
 
 ## DHCP Manager
 
@@ -75,4 +75,5 @@ Help desk ve varlık yönetimi sağlar.
 - Categories: ticket sınıflandırması
 - SLA: hedef süreler
 - Historical: ticket geçmişi
+
 

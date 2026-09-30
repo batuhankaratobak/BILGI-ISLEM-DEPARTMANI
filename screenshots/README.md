@@ -15,3 +15,4 @@
 Commit etmeden önce şifreleri, token'ları, anahtarları, kişisel host verilerini ve ilgisiz kişisel bilgileri kırpın veya redakte edin.
 
 Yayına hazır kanıt seti `screenshots/evidence/` klasöründedir.
+

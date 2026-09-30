@@ -30,8 +30,9 @@ Get-ADDomain
 Get-Service ADWS,DNS,DHCPServer,Netlogon,KDC
 Get-DhcpServerInDC
 Get-DhcpServerv4Scope
-Resolve-DnsName dc01.bkworks.local
+Resolve-DnsName dc01.bklab.local
 gpresult /r
 dcdiag /test:DNS /q
 repadmin /replsummary
 ```
+

@@ -25,3 +25,4 @@ Uygulanan düzeltmeyi yaz.
 ## Doğrulama
 
 Sorunun gerçekten çözüldüğünü gösteren kontrol.
+

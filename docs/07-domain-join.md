@@ -1,6 +1,6 @@
 # Domain Join
 
-`CLIENT01`, `bkworks.local` domain'ine katılmış Windows 11 istemcisidir.
+`CLIENT01`, `bklab.local` domain'ine katılmış Windows 11 istemcisidir.
 
 ## Amaç
 
@@ -17,7 +17,7 @@ Settings > System > About > Domain or workgroup > Join a domain
 PowerShell alternatifi:
 
 ```powershell
-Add-Computer -DomainName bkworks.local -Restart
+Add-Computer -DomainName bklab.local -Restart
 ```
 
 ## Doğrulama
@@ -30,6 +30,7 @@ Get-CimInstance Win32_ComputerSystem | Select-Object Name,Domain,PartOfDomain
 Beklenen:
 
 ```text
-Domain: bkworks.local
+Domain: bklab.local
 PartOfDomain: True
 ```
+

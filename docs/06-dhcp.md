@@ -11,14 +11,14 @@ Server Manager > Tools > DHCP
 Scope yolu:
 
 ```text
-DHCP > DC01.bkworks.local > IPv4 > Scope [10.10.10.0] BKWORKS-LAN
+DHCP > DC01.bklab.local > IPv4 > Scope [10.10.10.0] BKLAB-LAN
 ```
 
 ## Ayarlar
 
 - Scope: `10.10.10.100-10.10.10.200/24`
 - DNS Server: `10.10.10.10`
-- Domain: `bkworks.local`
+- Domain: `bklab.local`
 - Router: NAT kullanılıyorsa `10.10.10.1`
 
 ## Menülerin Anlamı
@@ -41,3 +41,4 @@ CLIENT01 üzerinde:
 ```powershell
 ipconfig /all
 ```
+

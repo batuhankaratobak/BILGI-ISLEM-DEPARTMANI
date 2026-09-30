@@ -17,3 +17,4 @@ Windows Update tamamlanmıyor veya hata veriyor.
 Get-Service wuauserv,bits
 Get-Volume
 ```
+

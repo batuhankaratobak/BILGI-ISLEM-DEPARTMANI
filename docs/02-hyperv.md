@@ -10,7 +10,7 @@ Start > Hyper-V Manager
 
 Kullanılan alanlar:
 
-- Virtual Switch Manager: `BKWORKS-LAN` internal switch'i oluşturur.
+- Virtual Switch Manager: `BKLAB-LAN` internal switch'i oluşturur.
 - VM Settings: RAM, CPU, disk, ISO ve network adapter ayarlarını yönetir.
 - Connect: VM konsoluna bağlanır.
 - Checkpoint: geri dönüş noktası oluşturur.
@@ -21,3 +21,4 @@ Kullanılan alanlar:
 - `CLIENT01`: Generation 2, 2 vCPU, 4 GB RAM, 64 GB VHDX
 
 Kurulum scriptleri VM varsa üzerine yazmaz; böylece yanlışlıkla mevcut VM'ler silinmez.
+

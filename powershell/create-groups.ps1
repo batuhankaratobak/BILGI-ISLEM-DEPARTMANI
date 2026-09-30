@@ -1,9 +1,9 @@
 #Requires -RunAsAdministrator
 Import-Module ActiveDirectory
-$base = 'OU=BKWORKS,DC=bkworks,DC=local'
+$base = 'OU=BKLAB,DC=bklab,DC=local'
 $departments = 'IT','Management','Operations','Sales','Accounting','Design'
-if (-not (Get-ADOrganizationalUnit -LDAPFilter '(ou=BKWORKS)' -SearchBase 'DC=bkworks,DC=local' -SearchScope OneLevel -ErrorAction SilentlyContinue)) {
-    New-ADOrganizationalUnit BKWORKS -Path 'DC=bkworks,DC=local' -ProtectedFromAccidentalDeletion $true
+if (-not (Get-ADOrganizationalUnit -LDAPFilter '(ou=BKLAB)' -SearchBase 'DC=bklab,DC=local' -SearchScope OneLevel -ErrorAction SilentlyContinue)) {
+    New-ADOrganizationalUnit BKLAB -Path 'DC=bklab,DC=local' -ProtectedFromAccidentalDeletion $true
 }
 foreach ($ou in $departments + @('Users','Computers','Servers')) {
     if (-not (Get-ADOrganizationalUnit -LDAPFilter "(ou=$ou)" -SearchBase $base -SearchScope OneLevel -ErrorAction SilentlyContinue)) {
@@ -15,4 +15,5 @@ foreach ($group in @('GG_IT','GG_MANAGEMENT','GG_OPERATIONS','GG_SALES','GG_ACCO
         New-ADGroup $group -SamAccountName $group -GroupScope Global -GroupCategory Security -Path "OU=Users,$base"
     }
 }
+
 

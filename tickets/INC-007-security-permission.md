@@ -14,3 +14,4 @@ Kullanıcının sahip olmaması gereken bir erişime sahip olduğu bildirilir.
 ## Çözüm
 
 Gereksiz grup üyeliği veya doğrudan verilmiş yetki kaldırılır. Least privilege uygulanır.
+
